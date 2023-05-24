@@ -1,0 +1,25 @@
+# This is a sample file, for detailed reference see: https://rudderlabs.github.io/pywht/
+inputs:
+  - name: rsIdentifies
+    table: identifies
+    occurred_at_col: timestamp
+    ids:
+      - select: "user_id"
+        type: user_id
+        entity: user
+      - select: "anonymous_id"
+        type: anonymous_id
+        entity: user
+      - select: "lower(email)"
+        type: email
+        entity: user
+  - name: rsTracks
+    table: tracks
+    occurred_at_col: timestamp
+    ids:
+      - select: "user_id"
+        type: user_id
+        entity: user
+      - select: "anonymous_id"
+        type: anonymous_id
+        entity: user
